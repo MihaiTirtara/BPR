@@ -1,3 +1,5 @@
+##Rename all files from tif to jpg
+
 import os
 path = r"D:\rvl-cdip\images"
 for dirpath, dirnames, files in os.walk(path):
