@@ -3,6 +3,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using System.Drawing;
+using RestSharp;
 
 namespace RestfullApi
 {
@@ -74,7 +75,38 @@ namespace RestfullApi
         }
         public string RestSharpImageClassificationBase64(string url, string imagePathName, string exceptionMessage)
         {
-            return null;
+            var base64Text = string.Empty;
+            var ImageJsonText = string.Empty;
+            exceptionMessage = string.Empty;
+            string responseContent = string.Empty;
+
+            try
+            {
+                base64Text = ImageFileTobase64String(imagePathName);
+                ImageJsonText = Base64ToJson(base64Text);
+                RestRequest request = new RestRequest(Method.POST);
+                request.AddHeader("content-type", "application/json");
+                request.AddParameter("application/json", ImageJsonText, ParameterType.RequestBody);
+
+                RestClient restClient = new RestClient(url);
+                IRestResponse response = restClient.Execute(request);
+                string errmsg = response.ErrorMessage;
+
+                if (string.IsNullOrEmpty(errmsg))
+                {
+                    responseContent = response.Content;
+                }
+                else
+                {
+                    responseContent = errmsg;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                exceptionMessage = $"An error occured.{ex.Message}";
+            }
+            return responseContent;
         }
 
         private string ImageFileTobase64String(string imagePath)
