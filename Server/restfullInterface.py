@@ -1,12 +1,12 @@
 from inteface import Interface
 
 class RestfullInterface(Interface):
-    def downloadFile(file):
+    def downloadFile(self,file):
         pass
-    def imageToText(image):
+    def imageToText(self,file):
         pass
-    def vectorizeObject(ocrText):
+    def vectorizeObject(self,ocrText):
         pass
-    def imageClassifier(object):
+    def imageClassifier(self,obj):
         pass
     
