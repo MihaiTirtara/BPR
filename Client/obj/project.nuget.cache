@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nQgXth+6fbBre2NMRVtfHQ0bt4VgglgX+cVdUfDeNFecoblo7xWvh5/7B4HUCiBdoGAVeGsKSSFZdR4Cms+d3Q==",
+  "dgSpecHash": "yNT0c8MYgB+ccc5lD3a0pJz1tJVkpPZeEy6Mp9l67S0aOuZhQCeLhRuXLenoA86HYPZsp6Lf+MRH2MIZJOPeIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mihai\\Documents\\BPR\\Client\\Client.csproj",
+  "projectFilePath": "C:\\Users\\mihai\\Documents\\BPR4\\Client\\Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mihai\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\mihai\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
