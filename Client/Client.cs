@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Client
 {
-    class Program
+    class Client
     {
         static void Main(string[] args)
         {
