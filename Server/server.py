@@ -11,8 +11,8 @@ from restfull import Restfull
  
 # initialize the flask application
 app = Flask(__name__)
-@app.route("/api/v1.0/csharp_python_restfulapi_json", methods=["POST"])
-def csharp_python_restfulapi_json():
+@app.route("/api/v1.0/csharp_python_restfulapi", methods=["POST"])
+def csharp_python_restfulapi():
 
     """
     simple c# test to call python restful api web service
