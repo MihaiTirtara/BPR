@@ -7,7 +7,7 @@ import sys
 import io
 import numpy as np
 
-from restfull import Restfull
+from API import Restfull
  
 # initialize the flask application
 app = Flask(__name__)
