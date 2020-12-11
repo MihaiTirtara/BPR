@@ -24,7 +24,7 @@ namespace RestfullApi
 
                 if (string.IsNullOrEmpty(errmsg))
                 {
-                    responseContent = response.Content;
+                    responseContent = response.Content.ToString();
                 }
                 else
                 {
