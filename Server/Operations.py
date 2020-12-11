@@ -46,10 +46,7 @@ class Restfull():
         classifiermodel = joblib.load('svm.joblib')
         try:    
             #Prediction
-            print('I am here')
             YPredict = classifiermodel.predict(obj)
-            print("I got here")
-            print(YPredict[0])
             if YPredict[0] == 0:
                 result = 'The document is a Letter'
             elif YPredict[0] == 1:
