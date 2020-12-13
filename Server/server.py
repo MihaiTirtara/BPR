@@ -11,14 +11,15 @@ from Operations import Restfull
  
 # initialize the flask application
 app = Flask(__name__)
+app.config.from_object('config.Config')
 @app.route("/api/v1.0/csharp_python_restfulapi", methods=["POST"])
 def csharp_python_restfulapi():
 
     file = request.files['content']
     image = rest.downloadFile(file)
-    ocrText = rest.imageToText(image)
-    processedText = rest.preprocessText(ocrText)
-    response = rest.imageClassifier(processedText)
+    ocrText = rest.imageToText(image,app.config['TESSCONFIG'])
+    processedText = rest.preprocessText(ocrText,app.config['VECTORIZER'])
+    response = rest.imageClassifier(processedText,app.config['MODEL'])
     
     return response
 

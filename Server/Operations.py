@@ -29,21 +29,21 @@ class Restfull():
         print("uploads\\" + file.filename)
         return("uploads\\" + file.filename)
 
-    def imageToText(self,filename):
-        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    def imageToText(self,filename,tesseractPath):
+        pytesseract.pytesseract.tesseract_cmd = tesseractPath
         ocrText = pytesseract.image_to_string(filename)
         print(ocrText)
         return ocrText
     
-    def preprocessText(self,ocrText):
-        vectorizer = joblib.load('vectorizer.joblib')
+    def preprocessText(self,ocrText, vectorizerPath):
+        vectorizer = joblib.load(vectorizerPath)
         textArray = [ocrText]
         vectorText = vectorizer.transform(textArray)
         vectorText = vectorText.reshape(1,-1)
         return vectorText
 
-    def imageClassifier(self,obj):
-        classifiermodel = joblib.load('svm.joblib')
+    def imageClassifier(self,obj, modelPath):
+        classifiermodel = joblib.load(modelPath)
         try:    
             #Prediction
             YPredict = classifiermodel.predict(obj)
