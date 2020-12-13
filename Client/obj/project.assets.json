@@ -5653,11 +5653,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mihai\\Documents\\BPR4\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\mihai\\Documents\\NewBpr\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\mihai\\Documents\\BPR4\\Client\\Client.csproj",
+      "projectPath": "C:\\Users\\mihai\\Documents\\NewBpr\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\mihai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mihai\\Documents\\BPR4\\Client\\obj\\",
+      "outputPath": "C:\\Users\\mihai\\Documents\\NewBpr\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mihai\\AppData\\Roaming\\NuGet\\NuGet.Config"
