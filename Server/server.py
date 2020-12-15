@@ -12,7 +12,7 @@ from Operations import Restfull
 # initialize the flask application
 app = Flask(__name__)
 app.config.from_object('config.Config')
-@app.route("/api/v1.0/csharp_python_restfulapi", methods=["POST"])
+@app.route("/api/v1.0/documents/classification/automatic", methods=["POST"])
 def csharp_python_restfulapi():
 
     file = request.files['content']

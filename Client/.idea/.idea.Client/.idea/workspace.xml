@@ -4,9 +4,11 @@
     <projectFile>TestClient/TestClient.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b94918e-def7-471d-b52f-13bc0d49551d" name="Default Changelist" comment="Client updates.">
+    <list default="true" id="4b94918e-def7-471d-b52f-13bc0d49551d" name="Default Changelist" comment="Client updates: async version.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentClassifier/RestApiDocumentClassifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentClassifier/RestApiDocumentClassifier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestClient/TestClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestClient/TestClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,9 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="b209f298-b9ca-443c-ad1c-79a1be929e38" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Projects/BPR/Client/DocumentClassifier/RestApiDocumentClassifier.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/TestClient/Program.cs" />
@@ -26,8 +31,8 @@
       <option value="$PROJECT_DIR$/DocumentClassifier/Models/Document.cs" />
       <option value="$PROJECT_DIR$/DocumentClassifier/Models/ClassificationResult.cs" />
       <option value="$PROJECT_DIR$/DocumentClassifier/IDocumentClassifier.cs" />
-      <option value="$PROJECT_DIR$/DocumentClassifier/RestApiDocumentClassifier.cs" />
       <option value="$PROJECT_DIR$/TestClient/UnitTest1.cs" />
+      <option value="$PROJECT_DIR$/DocumentClassifier/RestApiDocumentClassifier.cs" />
       <option value="$PROJECT_DIR$/TestClient/TestClient.cs" />
     </changedPaths>
   </component>
@@ -49,6 +54,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -79,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607981114496</updated>
-      <workItem from="1607981116474" duration="4351000" />
+      <workItem from="1607981116474" duration="6964000" />
     </task>
     <task id="LOCAL-00001" summary="Client updates.">
       <created>1607989367515</created>
@@ -88,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607989367515</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Client updates: async version.">
+      <created>1607990044237</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607990044237</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +123,11 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Client updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Client updates." />
+    <MESSAGE value="Client updates: async version." />
+    <option name="LAST_COMMIT_MESSAGE" value="Client updates: async version." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
