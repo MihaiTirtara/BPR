@@ -24,9 +24,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="letter.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
       <None Update="letterScanned.pdf">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
