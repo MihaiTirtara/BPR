@@ -1,13 +1,14 @@
-from abc import ABC
+class Document:
+    def __init__(self, fileContent):
+        self.FileContent = fileContent
 
-class Document(ABC):
-    def __init__(self,request):
-        self.FileContent = request
+
 class AutoClassificationDocument(Document):
-    def __init__(self,request):
+    def __init__(self, request):
         super().__init__(request)
+
+
 class ManualClassificationDocument(Document):
-    def __init__(self,request,GroupName):
+    def __init__(self,request, groupName):
         super().__init__(request)
-        self.GroupName = GroupName
-                             
+        self.GroupName = groupName

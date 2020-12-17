@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
@@ -32,7 +33,7 @@ namespace DocumentClassifier
             HttpResponseMessage response = await _httpClient.PostAsync(url, requestBody);
             response.EnsureSuccessStatusCode();
             string jsonResponse = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<T>(jsonResponse);
+            return JsonSerializer.Deserialize<T>(jsonResponse, new JsonSerializerOptions {PropertyNameCaseInsensitive = true});
         }
     }
 }

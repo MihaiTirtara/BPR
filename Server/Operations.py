@@ -18,7 +18,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 class Restfull():
 
-    def downloadFile(self,file):
+    def downloadFile(self, file):
         print(file)
         in_memory_file = io.BytesIO()
         file.save(in_memory_file)
@@ -43,10 +43,12 @@ class Restfull():
         return vectorText
 
     def imageClassifier(self,obj, modelPath):
+        types = ["Letter", "TooLazy"]
         classifiermodel = joblib.load(modelPath)
         try:    
             #Prediction
             YPredict = classifiermodel.predict(obj)
+            return types[YPredict[0]]
             if YPredict[0] == 0:
                 result = 'The document is a Letter'
             elif YPredict[0] == 1:
@@ -90,4 +92,4 @@ class Restfull():
             result = "An error occured"
             response = jsonify(result)
             response.status_code = 400
-        return response   
+        return response

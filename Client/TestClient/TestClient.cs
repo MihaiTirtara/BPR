@@ -31,7 +31,7 @@ namespace TestClient
         {
             var documents = new List<AutoClassificationDocument>
             {
-                new AutoClassificationDocument {FileContent = await File.ReadAllBytesAsync(@"C:\Users\mihai\Documents\NewBpr\letter.png")}
+                new AutoClassificationDocument {FileContent = await File.ReadAllBytesAsync(@"letter.png")}
             };
             List<ClassificationResult> classificationResults = (await _documentClassifier.AutomaticallyClassifyDocuments(documents)).ToList();
             

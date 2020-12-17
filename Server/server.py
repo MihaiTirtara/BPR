@@ -1,5 +1,5 @@
 # import flask microframework library
-from flask import Flask
+from flask import Flask, Response
 from flask import request
 from flask import jsonify
 import json 
@@ -14,20 +14,26 @@ from Operations import Restfull
 # initialize the flask application
 app = Flask(__name__)
 app.config.from_object('config.Config')
+
+
 @app.route("/api/v1.0/documents/classification/automatic", methods=["POST"])
 def automaticallyClasifyDocuments(): 
     #Trying to decode the image
-    request_data = request.data
-    image_string = base64.b64decode(request_data)
-    np_array_encode = np.fromstring(image_string, np.uint8)    
-    image = cv2.imdecode(np_array_encode, cv2.IMREAD_GRAYSCALE)
-    print(image)
+    autoClassificationsDocuments = request.json
+    classificationResults = []
+    for document in autoClassificationsDocuments:
+        file_content = bytes(document["FileContent"])
+        np_array_encode = np.fromstring(file_content, np.uint8)
+        image = cv2.imdecode(np_array_encode, 1)
+        imagePath = "uploads\\test.png"
+        cv2.imwrite(imagePath, image)
+        ocrText = rest.imageToText(imagePath,app.config['TESSCONFIG'])
+        processedText = rest.preprocessText(ocrText,app.config['VECTORIZER'])
+        response = rest.imageClassifier(processedText,app.config['MODEL'])
+        classificationResults.append({'groupName': response, 'error': None})
 
-    #file = request.files['content']
-    #image = rest.downloadFile(file)
-    #ocrText = rest.imageToText(image,app.config['TESSCONFIG'])
-    #processedText = rest.preprocessText(ocrText,app.config['VECTORIZER'])
-    #response = rest.imageClassifier(processedText,app.config['MODEL'])
+    return jsonify(classificationResults)
+
     
     #return response
 
