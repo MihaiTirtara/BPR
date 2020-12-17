@@ -36,6 +36,8 @@
       <e p="TestClient" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="letter.png" t="Include" />
+        <e p="letterScanned.pdf" t="Include" />
+        <e p="letterText.pdf" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

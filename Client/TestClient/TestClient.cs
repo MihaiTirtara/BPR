@@ -27,15 +27,26 @@ namespace TestClient
         
         
         [Fact]
-        public async Task Test_AutomaticallyClassifyDocuments()
+        public async Task Test_AutomaticallyClassifyDocuments_Scanned()
+        {
+            await AssertClassificationResult("Letter", @"letterScanned.pdf");
+        }
+        
+        [Fact]
+        public async Task Test_AutomaticallyClassifyDocuments_Text()
+        {
+            await AssertClassificationResult("Letter", @"letterText.pdf");
+        }
+
+        private async Task AssertClassificationResult(string expectedDocumentType, string fileName)
         {
             var documents = new List<AutoClassificationDocument>
             {
-                new AutoClassificationDocument {FileContent = await File.ReadAllBytesAsync(@"letter.png")}
+                new AutoClassificationDocument {FileContent = await File.ReadAllBytesAsync(fileName)}
             };
             List<ClassificationResult> classificationResults = (await _documentClassifier.AutomaticallyClassifyDocuments(documents)).ToList();
             
-            Assert.Equal("Letter", classificationResults[0].GroupName);
+            Assert.Equal(expectedDocumentType, classificationResults[0].GroupName);
         }
     }
 }

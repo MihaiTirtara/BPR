@@ -1,15 +1,9 @@
 # import flask microframework library
-from flask import Flask, Response
+from flask import Flask
 from flask import request
 from flask import jsonify
-import json
-import sys
-import io
-import numpy as np
-import base64
-from cv2 import cv2
 
-from Operations import Restfull
+from ClassifierService import ClassifierService
 
 # initialize the flask application
 app = Flask(__name__)
@@ -18,25 +12,22 @@ app.config.from_object('config.Config')
 
 @app.route("/api/v1.0/documents/classification/automatic", methods=["POST"])
 def automaticallyClassifyDocuments():
-    # Trying to decode the image
-    autoClassificationsDocuments = request.json
+    autoClassificationsDocuments = request.json # Read the request body as a dictionary.
     classificationResults = []
     for document in autoClassificationsDocuments:
-        imagePath = rest.downloadFile(document)
-        ocrText = rest.imageToText(imagePath, app.config['TESSCONFIG'])
-        processedText = rest.preprocessText(ocrText, app.config['VECTORIZER'])
-        classificationResult = rest.imageClassifier(processedText, app.config['MODEL'])
+        pdfText = classifierService.pdfBytesToText(document)
+        preprocessed_text = classifierService.preprocessText(pdfText)
+        classificationResult = classifierService.classifyText(preprocessed_text)
         classificationResults.append(classificationResult)
     return jsonify(classificationResults)
 
 
 def manuallyClassifyDocuments(documents):
-    print("Not implemented")
+    print("Not implemented") # Theoretically could just return that the classification was successful.
 
 
 if __name__ == "__main__":
-    global rest
-    rest = Restfull()
-    app.run(debug=True)
-    #     run flask application in debug mode
+    global classifierService
+    classifierService = ClassifierService(app.config['TESSCONFIG'], app.config['VECTORIZER'], app.config['MODEL'])
+    # run flask application in debug mode
     app.run(debug=True)
