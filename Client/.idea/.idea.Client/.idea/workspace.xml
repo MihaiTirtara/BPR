@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b94918e-def7-471d-b52f-13bc0d49551d" name="Default Changelist" comment="Client updates: async version.">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/BPR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/BPR.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocumentClassifier/RestApiDocumentClassifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentClassifier/RestApiDocumentClassifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestClient/TestClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestClient/TestClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestClient/TestClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestClient/TestClient.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ML Algorithms/SVM  -  supervised.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../ML Algorithms/SVM  -  supervised.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Models/Document.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Models/Document.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +16,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="b209f298-b9ca-443c-ad1c-79a1be929e38" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9481D310-60CF-4AB5-BB18-EE2195E361A5/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,7 +55,7 @@
     <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.TestClient">
+  <component name="RunManager">
     <configuration name="TestClient" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -100,6 +85,7 @@
       <updated>1607981114496</updated>
       <workItem from="1607981116474" duration="6964000" />
       <workItem from="1608213704746" duration="7166000" />
+      <workItem from="1608224545933" duration="2050000" />
     </task>
     <task id="LOCAL-00001" summary="Client updates.">
       <created>1607989367515</created>
