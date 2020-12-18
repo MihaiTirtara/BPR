@@ -1,3 +1,5 @@
+# Not using models because "Python JSON serialization to custom classes" world is not the most sane one.
+
 class Document:
     def __init__(self, fileContent):
         self.FileContent = fileContent

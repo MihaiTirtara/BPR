@@ -24,19 +24,33 @@ namespace TestClient
             // In actual NoblyDoc project the implementation would be dependency injected for the interface, instead of hardcoding the implementation, as here.
             _documentClassifier = new RestApiDocumentClassifier(httpClient);
         }
-        
-        
+
+
         [Fact]
         public async Task Test_AutomaticallyClassifyDocuments_Scanned()
         {
             await AssertClassificationResult("Letter", @"letterScanned.pdf");
         }
-        
+
         [Fact]
         public async Task Test_AutomaticallyClassifyDocuments_Text()
         {
             await AssertClassificationResult("Letter", @"letterText.pdf");
         }
+
+        
+        [Fact]
+        public async Task Test_AutomaticallyClassifyDocuments_Invoice_Scanned()
+        {
+            await AssertClassificationResult("Invoice", @"invoiceScanned.pdf");
+        }
+
+        [Fact]
+        public async Task Test_AutomaticallyClassifyDocuments_Invoice_Text()
+        {
+            await AssertClassificationResult("Invoice", @"invoiceText.pdf");
+        }
+
 
         private async Task AssertClassificationResult(string expectedDocumentType, string fileName)
         {
@@ -44,8 +58,9 @@ namespace TestClient
             {
                 new AutoClassificationDocument {FileContent = await File.ReadAllBytesAsync(fileName)}
             };
-            List<ClassificationResult> classificationResults = (await _documentClassifier.AutomaticallyClassifyDocuments(documents)).ToList();
-            
+            List<ClassificationResult> classificationResults =
+                (await _documentClassifier.AutomaticallyClassifyDocuments(documents)).ToList();
+
             Assert.Equal(expectedDocumentType, classificationResults[0].GroupName);
         }
     }
